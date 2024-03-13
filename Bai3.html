@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-tb+DT27ajVBqE5LqH5FgaJmzxQ6vyoMrr4kvaiukkRgXEmuIe74GJ+tWlsIoq6vFSTpw9Hugcc+rkTPXUCG28A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Bai3.css">
+</head>
+<body>
+    <section id="contact">
+        <h1>LIÊN HỆ</h1>
+        <div id="top-color-splash"></div>
+        <div class="contact-content">
+            <div class="contact-info">
+                <h2>Thông tin</h2>
+                <div class="info">
+                    <i class="fa fa-map-marker"></i>
+                    <p>  
+                        <figure>
+                            <img src="https://cdn-icons-png.flaticon.com/128/12540/12540558.png" style =" width: 33px;"> KPL Trung. Tại Thủ Đại, Tp. HCM
+                           <p>
+                            <img src="https://cdn-icons-png.flaticon.com/128/4547/4547433.png" style =" width: 35px;">   (+84) 3454644435
+                           </p> 
+                           <p>
+                            <img src="https://cdn-icons-png.flaticon.com/128/732/732200.png" style =" width: 35px;">    infor@edu.vn
+                           </p>
+                        </figure>
+                </div>
+                <div class="info">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                
+            </div>
+            <div class="contact-form">
+                <h3>Hãy liên lạc với chúng tôi bất cứ khi nào!</h3>
+                <form action="#" onsubmit="return confirmFormSubmit();">
+                    <label for="fullname">Họ và tên:</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="Nhập họ và tên">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Nhập email">
+                    <br>
+                    <label for="phone">Số điện thoại:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại">
+                    <br>
+                    <label for="message">Nội dung:</label>
+                    <textarea id="message" name="message" rows="5" placeholder=""></textarea>
+                    <br>
+                    <button type="submit">Gửi</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+    function confirmFormSubmit() {
+        var name = document.getElementById("fullname").value;
+        var email = document.getElementById("email").value;
+        var phoneNumber = document.getElementById("phone").value;
+        var feedback = document.getElementById("message").value;
+
+        var message = "Thông tin của bạn:\n\n" +
+            "Họ và tên: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Số điện thoại: " + phoneNumber + "\n" +
+            "Nội dung góp ý: " + feedback;
+
+        if (confirm(message)) {
+            // If user confirms, submit the form
+            return true;
+        } else {
+            // If user cancels, prevent form submission
+            return false;
+        }
+    }
+    </script>
+    </body>
+    </html>
